@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EndpointWithDelay.Controllers
@@ -10,13 +11,24 @@ namespace EndpointWithDelay.Controllers
     [Route("api/[controller]")]
     public class ValuesController : ControllerBase
     {
+        IApplicationLifetime _appLifetime;
+        ShutdownCounter _shutdownCounter;
+
+        public ValuesController(IApplicationLifetime appLifetime, ShutdownCounter shutdownCounter)
+        {
+            _appLifetime = appLifetime;
+            _shutdownCounter = shutdownCounter;
+        }
         public Response Get(string key)
         {
+            if (_shutdownCounter.Shutdown())
+                _appLifetime.StopApplication();
+
             int i = 0;
 
             while (true)
             {
-                if (i > 500) break;
+                if (i > 350) break;
                 Thread.Sleep(10);
                 i++;
             }
