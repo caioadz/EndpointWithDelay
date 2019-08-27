@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using EndpointWithDelayHelper;
 
 namespace EndpointWithDelay.Controllers
 {
@@ -40,12 +37,12 @@ namespace EndpointWithDelay.Controllers
     public class Response
     {
         public string Key { get; set; }
-        public int? Value { get; set; }
+        public string Value { get; set; }
 
         public Response(string key)
         {
             Key = key;
-            Value = Key?.GetHashCode();
+            Value = Key?.ToBase64();
         }
     }
 }

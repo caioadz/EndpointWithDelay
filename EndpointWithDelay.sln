@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndpointWithDelay", "EndpointWithDelay\EndpointWithDelay.csproj", "{A32ABD57-19B3-43FE-801F-B64177966737}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EndpointWithDelay", "EndpointWithDelay\EndpointWithDelay.csproj", "{A32ABD57-19B3-43FE-801F-B64177966737}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndpointWithDelayClient", "EndpointWithDelayClient\EndpointWithDelayClient.csproj", "{BE9FFB00-9274-4512-B828-FAA4880F74CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndpointWithDelayHelper", "EndpointWithDelayHelper\EndpointWithDelayHelper.csproj", "{A42E98D9-A331-418F-AFDC-8C209D1CEEED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{A32ABD57-19B3-43FE-801F-B64177966737}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A32ABD57-19B3-43FE-801F-B64177966737}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A32ABD57-19B3-43FE-801F-B64177966737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE9FFB00-9274-4512-B828-FAA4880F74CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE9FFB00-9274-4512-B828-FAA4880F74CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE9FFB00-9274-4512-B828-FAA4880F74CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE9FFB00-9274-4512-B828-FAA4880F74CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42E98D9-A331-418F-AFDC-8C209D1CEEED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A42E98D9-A331-418F-AFDC-8C209D1CEEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A42E98D9-A331-418F-AFDC-8C209D1CEEED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A42E98D9-A331-418F-AFDC-8C209D1CEEED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
